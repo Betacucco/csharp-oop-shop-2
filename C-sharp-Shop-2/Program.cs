@@ -25,3 +25,14 @@ Elettrodomestico tritacarne = new Elettrodomestico("Tritacarne", "Serve a tritar
 tritacarne.StampaProdotto();
 tritacarne.Rotto();
 tritacarne.StampaProdotto();
+
+CiboInScatola tonno = new CiboInScatola("Tonno", "pesce sott'olio", 300);
+tonno.StampaProdotto();
+tonno.AperturaScatoletta();
+tonno.Mangia(140);
+tonno.StampaProdotto();
+tonno.AggiungiCibo(25);
+tonno.StampaProdotto();
+tonno.SvuotaScatoletta();
+tonno.StampaProdotto();
+

@@ -51,7 +51,7 @@ namespace C_sharp_Shop_2
             }
         }
 
-        //Metodo che scuota sacchetto
+        //Metodo che svuota sacchetto
         public void SvuotaSacchetto()
         {
             this.numeroPezziDiFrutta = 0;
