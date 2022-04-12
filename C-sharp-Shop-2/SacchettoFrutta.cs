@@ -8,10 +8,12 @@ namespace C_sharp_Shop_2
 {
     internal class SacchettoFrutta : Prodotto
     {
-        private int numeroPezziDiFrutta;
+        //Attributi
+        public int numeroPezziDiFrutta { get; set; }
         private const int numeroMassimoDiPezzi = 5;
-        private string provenienza;
+        public string provenienza { get; set; }
 
+        //Overloading del costruttore senza prezzo ed iva
         public SacchettoFrutta(string nomeFrutta, string descrizione, int numeroPezzi, string provenienza) : base(nomeFrutta, descrizione)
         {
             this.numeroPezziDiFrutta = numeroPezzi;
@@ -19,6 +21,7 @@ namespace C_sharp_Shop_2
 
         }
 
+        //Metodo che mangia frutta
         public void Mangia(int fruttaMangiata)
         {
             if (this.numeroPezziDiFrutta - fruttaMangiata > 0)
@@ -33,6 +36,7 @@ namespace C_sharp_Shop_2
             }
         }
 
+        //Metodo che aggiunge frutta
         public void AggiungiFrutta(int fruttaDaAggiungere)
         {
             if (this.numeroPezziDiFrutta + fruttaDaAggiungere <= numeroMassimoDiPezzi)
@@ -47,12 +51,14 @@ namespace C_sharp_Shop_2
             }
         }
 
+        //Metodo che scuota sacchetto
         public void SvuotaSacchetto()
         {
             this.numeroPezziDiFrutta = 0;
             Console.WriteLine("Sacchetto svuotato!");
         }
 
+        //Override della stampa di prodotto
         public override void StampaProdotto()
         {
             Console.WriteLine("--------SACCHETTO DI FRUTTA----------");

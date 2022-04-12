@@ -11,9 +11,9 @@ namespace C_sharp_Shop_2
         // ATTRIBUTI DELLA CLASSE (o superclasse se estesa)
         private int codice;
         private protected string nome;
-        private string descrizione;
-        private double prezzo;
-        private double iva;
+        public string descrizione { get; set; }
+        public double prezzo { get; set; }
+        public double iva { get; set; }
 
         // COSTRUTTORE senza prezzo ed iva
         public Prodotto(string nome, string descrizione)
@@ -55,6 +55,7 @@ namespace C_sharp_Shop_2
         {
             return iva;
         }
+
         public void SetPrezzo(double nuovoPrezzo)
         {
             if (nuovoPrezzo < 0)
@@ -101,7 +102,7 @@ namespace C_sharp_Shop_2
             return codiceString.PadLeft(8, zero);
         }
 
-        public double PrezzoSenzaIva()
+        public virtual double PrezzoSenzaIva()
         {
             double totale;
             double percentualePrezzoSenzaIva;

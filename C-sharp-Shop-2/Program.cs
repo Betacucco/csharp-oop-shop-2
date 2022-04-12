@@ -12,5 +12,16 @@ sorgesana.StampaProdotto();
 sorgesana.Svuota();
 sorgesana.StampaProdotto();
 
+SacchettoFrutta mela = new SacchettoFrutta("Mela", "Frutto dolciastro", 3, "Italia");
+mela.StampaProdotto();
+mela.Mangia(1);
+mela.StampaProdotto();
+mela.AggiungiFrutta(4);
+mela.StampaProdotto();
+mela.SvuotaSacchetto();
+mela.StampaProdotto();
 
-
+Elettrodomestico tritacarne = new Elettrodomestico("Tritacarne", "Serve a tritare la carne", 89.99, 10);
+tritacarne.StampaProdotto();
+tritacarne.Rotto();
+tritacarne.StampaProdotto();

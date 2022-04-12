@@ -25,6 +25,7 @@ namespace C_sharp_Shop_2
 
         }
 
+        //Metodo che beve acqua
         public void Bevi(double litriDaBere)
         {
             if (this.litri - litriDaBere > 0)
@@ -39,6 +40,7 @@ namespace C_sharp_Shop_2
             }
         }
 
+        //Metodo che riempie la bottiglia di acqua
         public void Riempi(double litriDaAggiungere)
         {
             if(this.litri + litriDaAggiungere <= massimaCapienzaBottiglia)
@@ -52,12 +54,14 @@ namespace C_sharp_Shop_2
             }
         }
         
+        //Metodo che svuota la bottiglia di acqua
         public void Svuota()
         {
             this.litri = 0;
             Console.WriteLine("Bottiglia svuotata!");
         }
 
+        //Override del metodo di stampa dalla superclasse Prodotto
         public override void StampaProdotto()
         {
             Console.WriteLine("--------ACQUA----------");
@@ -68,6 +72,7 @@ namespace C_sharp_Shop_2
             Console.WriteLine("Litri in galloni: " + ConvertiInGalloni(this.litri));
         }
 
+        //Metodo statico per convertire i litri in galloni
         public static double ConvertiInGalloni(double litri)
         {
             double contenutoInGalloni = litri * galloni;
