@@ -1,9 +1,19 @@
 ﻿using C_sharp_Shop_2;
 
-Prodotto biscotti = new Prodotto("Biscotti", "Senza glutine");
-biscotti.StampaProdotto();
+Console.WriteLine("Inserisci litri di acqua: ");
+double litri = double.Parse(Console.ReadLine());
 
-Acqua sorgesana = new Acqua("Sorgesana", "Naturale", 1, 7, "fiume");
+Acqua sorgesana = new Acqua("Sorgesana", "Naturale", litri, 7, "fiume");
+
+try
+{
+    sorgesana.Bevi(litri);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
 sorgesana.StampaProdotto();
 sorgesana.Riempi(0.5);
 sorgesana.StampaProdotto();

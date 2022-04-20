@@ -25,18 +25,31 @@ namespace C_sharp_Shop_2
 
         }
 
+        public void MaxCapienza()
+        {
+            if(this.litri > massimaCapienzaBottiglia)
+            {
+                throw new ArgumentOutOfRangeException("litri", "Il suo valore e' maggiore della massima capienza!");
+            }
+        }
+
         //Metodo che beve acqua
         public void Bevi(double litriDaBere)
         {
+            if (litriDaBere < 0)
+            {
+                throw new ArgumentOutOfRangeException("litriDaBere", "Il suo valore e' negativo!");
+            }
+
             if (this.litri - litriDaBere > 0)
             {
                 this.litri = this.litri - litriDaBere;
                 Console.WriteLine("glu glu glu, ho bevuto " + litriDaBere + "l");
             }
             else
-            {
-                Console.WriteLine("glu glu glu, mi dispiace hai finito la bottiglia");
+            { 
                 this.litri = 0;
+                throw new ArgumentOutOfRangeException("litri", "l'acqua bevuta e' maggiore di quella presente nella bottiglia.");
             }
         }
 
